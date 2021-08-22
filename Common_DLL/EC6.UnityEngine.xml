@@ -1,0 +1,1958 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EC6.UnityEngine</name>
+    </assembly>
+    <members>
+        <member name="T:EC6.UnityEngine.CoroutineConfig">
+            <summary>
+            协程配置参数
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineConfig.MaxAsyncTask">
+            <summary>
+            最大异步线程数
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineException">
+            <summary>
+            协议异常
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineThreaOvertimeException">
+            <summary>
+            协议异常
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineInfo">
+            <summary>
+            协程信息
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineInfo.Text">
+            <summary>
+            文本标题
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineInfo.#ctor">
+            <summary>
+            (构造函数) 
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineInfo.#ctor(System.String)">
+            <summary>
+            (构造函数) 
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineTaskScheduler">
+            <summary>
+            协成任务调度
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTaskScheduler.Default">
+            <summary>
+            默认任务调度
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTaskScheduler.#ctor">
+            <summary>
+            初始化任务调度
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTaskScheduler.MaxAsyncTask">
+            <summary>
+            异步等待的最大线程数
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTaskScheduler.WaitingTimeMs">
+            <summary>
+            等待时间, 默认10毫秒(单位:毫秒)
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTaskScheduler.QueueTask(EC6.UnityEngine.Coroutine)">
+            <summary>
+            列队任务
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTaskScheduler.QueueTask(System.Object,EC6.UnityEngine.Coroutine)">
+            <summary>
+            列队任务
+            </summary>
+            <param name="sender">sender</param>
+            <param name="task"></param>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineTaskStatus">
+            <summary>
+            协程任务的状态
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTaskStatus.Created">
+            <summary>
+            该任务已初始化，但尚未被计划。
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTaskStatus.WaitingForActivation">
+            <summary>
+            该任务正在等待 .NET Framework 基础结构在内部将其激活并进行计划。
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTaskStatus.WaitingToRun">
+            <summary>
+            该任务已被计划执行，但尚未开始执行。
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTaskStatus.Running">
+            <summary>
+            该任务正在运行，但尚未完成。
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTaskStatus.WaitingForChildrenToComplete">
+            <summary>
+            该任务已完成执行，正在隐式等待附加的子任务完成。
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTaskStatus.RanToCompletion">
+            <summary>
+            已成功完成执行的任务。
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTaskStatus.Canceled">
+            <summary>
+            该任务已通过对其自身的 CancellationToken 引发 OperationCanceledException 对取消进行了确认，此时该标记处于已发送信号状态；或者在该任务开始执行之前，已向该任务的
+            CancellationToken 发出了信号。 有关详细信息，请参阅任务取消。
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTaskStatus.Faulted">
+            <summary>
+            由于未处理异常的原因而完成的任务。
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineThreadManager">
+            <summary>
+            协程的线程管理器
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineThreadManager.Instance">
+            <summary>
+            线程管理器
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.SettingSet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.SettingSet.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC6.UnityEngine.ThreadTask">
+            <summary>
+            线程异步的操作
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.ThreadTask.Task">
+            <summary>
+            任务对象
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.ThreadTask.keepWaiting">
+            <summary>
+            继续等待
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.WaitAsyncTask">
+            <summary>
+            异步任务
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask.keepWaiting">
+            <summary>
+            一直等待
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask.AutoExitError">
+            <summary>
+            当出现错误， 自动结束整个协程
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTask.m_IsQueueAdded">
+            <summary>
+            已经添加到列队
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask.#ctor(System.Action{System.Object},System.Object)">
+            <summary>
+            (构造函数) 异步任务
+            </summary>
+            <param name="action"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask.#ctor(System.Action)">
+            <summary>
+            (构造函数) 异步任务
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask.#ctor(System.Action{System.Object},System.Object,System.Single)">
+            <summary>
+            (构造函数) 异步任务
+            </summary>
+            <param name="action"></param>
+            <param name="state"></param>
+            <param name="timeoutS"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask.#ctor(System.Action,System.Single)">
+            <summary>
+            (构造函数) 异步任务
+            </summary>
+            <param name="action"></param>
+            <param name="timeoutS"></param>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask.TimeoutS">
+            <summary>
+            超时的毫秒数
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask.MoveNext">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask.isDone">
+            <summary>
+            完成
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask.Error">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask.Stop">
+            <summary>
+            停止线程
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask.DisposeBase">
+            <summary>
+            释放内存
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineResult">
+            <summary>
+            协程反馈值
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineResult.#ctor(System.Object)">
+            <summary>
+            (构造函数) 协程反馈值
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineResult.Value">
+            <summary>
+            反馈附带的值
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineTask">
+            <summary>
+            协程任务
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.ID">
+            <summary>
+            唯一编码
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineTask.m_AutoREvent">
+            <summary>
+            连接成功与否的 
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.TimeoutS">
+            <summary>
+            任务超时时间
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.#ctor">
+            <summary>
+            (构造函数)
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.#ctor(System.Collections.IEnumerator)">
+            <summary>
+            (构造函数) 
+            </summary>
+            <param name="funItem"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.#ctor(System.Collections.IEnumerator,System.Single)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="funItem"></param>
+            <param name="secondsTimeout"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.#ctor(System.Action)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="fun"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.#ctor(EC6.UnityEngine.CoroutineTaskScheduler)">
+            <summary>
+            (构造函数)
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.#ctor(System.Collections.IEnumerator,EC6.UnityEngine.CoroutineTaskScheduler)">
+            <summary>
+            (构造函数) 
+            </summary>
+            <param name="funItem"></param>
+            <param name="scheduler"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.#ctor(System.Collections.IEnumerator,System.Single,EC6.UnityEngine.CoroutineTaskScheduler)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="funItem"></param>
+            <param name="secondsTimeout"></param>
+            <param name="scheduler"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.#ctor(System.Action,EC6.UnityEngine.CoroutineTaskScheduler)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="fun"></param>
+            <param name="scheduler"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Finalize">
+            <summary>
+            释放
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.Status">
+            <summary>
+            协程任务状态
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.IsFaulted">
+            <summary>
+            发生错误
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.IsCompleted">
+            <summary>
+            已经完成
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.IsCanceled">
+            <summary>
+            已经取消
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.OnContinuation">
+            <summary>
+            触发
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.Exception">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.Result">
+            <summary>
+             协程反馈值
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.Scheduler">
+            <summary>
+            任务调度器
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.Coroutine">
+            <summary>
+            协程对象
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.Owner">
+            <summary>
+            所属对象
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.HasItems">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.Items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.StartBase(System.Object)">
+            <summary>
+            协程所属的动作对象.
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Start">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Start(System.Object)">
+            <summary>
+            启动
+            </summary>
+            <param name="owner">协程所属的动作对象</param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.ContinueWith(System.Action{EC6.UnityEngine.CoroutineTask})">
+            <summary>
+            等待协程执行完毕
+            </summary>
+            <param name="continuationAction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Wait">
+            <summary>
+            等待协程执行完毕.线程阻止
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Wait(System.Single)">
+            <summary>
+            等待协程执行完毕.线程阻止;
+            (警告)这个是线程等待, 不是协程等待..
+            </summary>
+            <param name="secondsTimeout">超时时间, 单位(秒)</param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Wait(System.TimeSpan)">
+            <summary>
+            等待协程执行完毕, 线程阻止
+            (警告)这个是线程等待, 不是协程等待..
+            </summary>
+            <param name="timeout"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Run(System.Collections.IEnumerator)">
+            <summary>
+            运行协程
+            </summary>
+            <param name="enumerator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Run(System.Collections.IEnumerator,System.Single)">
+            <summary>
+            运行协程
+            </summary>
+            <param name="enumerator"></param>
+            <param name="secondsTimeout">超时时间(单位:秒)</param>
+            <returns></returns>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.Tag">
+            <summary>
+            自定义
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineTask.RefStack">
+            <summary>
+            协程堆载
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.CustomDispose">
+            <summary>
+            自定义释放
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineTask.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.Timeout">
+            <summary>
+            反馈给协程, 超时的时间
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Timeout.#ctor(System.Single)">
+            <summary>
+            超时时候使用
+            </summary>
+            <param name="time">超时的秒数</param>
+        </member>
+        <member name="M:EC6.UnityEngine.Timeout.#ctor(System.TimeSpan)">
+            <summary>
+            超时时候使用
+            </summary>
+            <param name="span"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.Timeout.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            超时时候使用
+            </summary>
+            <param name="hours">时间: 小时</param>
+            <param name="minutes">分钟</param>
+            <param name="seconds">秒数</param>
+        </member>
+        <member name="P:EC6.UnityEngine.Timeout.Time">
+            <summary>
+            超时时间, 秒数
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.TempCoroutineBox">
+            <summary>
+            节点值(又封装了一层) - 有没有必要啊 (有待考虑)
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.TempCoroutineBox.Owner">
+            <summary>
+            所属对象 (一般是 MonoBehaviour 对象)
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.TempCoroutineBox.Items">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineManager">
+            <summary>
+            协程管理器
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineManager.Instance">
+            <summary>
+            实例
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineManager.m_WaitingTimeMs">
+            <summary>
+            毫秒
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineManager.m_WaitingTimeMis">
+            <summary>
+            微秒
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineManager.WaitingTimeMs">
+            <summary>
+            等待时间, 默认10毫秒(单位:毫秒)
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.Start(System.Collections.IEnumerator,System.Single)">
+            <summary>
+            开始携程
+            </summary>
+            <param name="item"></param>
+            <param name="timeoutS">超时时间. 单位(秒)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.Start(System.Collections.IEnumerator)">
+            <summary>
+            开始协程
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.Start(EC6.UnityEngine.Coroutine)">
+            <summary>
+            开始携程
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineManager.m_OwneCoroutineList">
+            <summary>
+            每个对象储存的对象 id
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineManager.m_LastWaitMis">
+            <summary>
+            上一次暂停的时间(微秒)
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineManager.LogDebugEnabled">
+            <summary>
+            日志激活
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.StopAllCoroutines(System.Object)">
+            <summary>
+            暂停全部协程函数
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.StartCoroutine(System.Collections.IEnumerator,System.Single)">
+            <summary>
+            启动携程
+            </summary>
+            <param name="item"></param>
+            <param name="timeoutS">超时时间, 毫秒</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.StartCoroutine(System.Collections.IEnumerator)">
+            <summary>
+            启动协程
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.StartCoroutine(EC6.UnityEngine.Coroutine)">
+            <summary>
+            启动协程
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.StartCoroutine(System.Object,System.Collections.IEnumerator)">
+            <summary>
+            启动协程
+            </summary>
+            <param name="sender"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.StartCoroutine(System.Object,EC6.UnityEngine.Coroutine)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.StopCoroutine(System.Object,System.Collections.IEnumerator)">
+            <summary>
+            停止协程
+            </summary>
+            <param name="sender"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.StopCoroutine(System.Object,EC6.UnityEngine.Coroutine)">
+            <summary>
+            停止协程
+            </summary>
+            <param name="sender"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.Update_FroCoroutine(EC6.UnityEngine.Coroutine,System.Object@)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="pushObj">需要入列队的</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.Update_ForCoroutineStack(System.Object,System.Object@)">
+            <summary>
+            列队
+            </summary>
+            <param name="obj"></param>
+            <param name="pushObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.DisposeItems(System.Collections.Concurrent.ConcurrentQueue{EC6.UnityEngine.CoroutineManager.TmpLinkedListNode})">
+            <summary>
+            删除项目集合
+            </summary>
+            <param name="deleteItems"></param>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineManager.m_Owner_DeleteNode">
+            <summary>
+            准备删除的节点集合
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.PreDeleteItems">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.PreNewItems">
+            <summary>
+            新增加的协程
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineManager.ThreadEnabled">
+            <summary>
+            线程激活. 默认 false
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.UpdateCoroutine">
+            <summary>
+            更新携程状态
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineManager.DeleteOwnerEmpty">
+            <summary>
+            清理已经没有协程的 动作
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CoroutineStack">
+            <summary>
+            后进先出的列队
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CoroutineStack.m_RawCoroutine">
+            <summary>
+            第一层对象
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineStack.TimeStart">
+            <summary>
+            列队运行的时间
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineStack.NextTimeLog">
+            <summary>
+            下一个次日志
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineStack.Push(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineStack.Text">
+            <summary>
+            第一层
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineStack.LimitTime">
+            <summary>
+            超时期限
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CoroutineStack.HasLimitTime">
+            <summary>
+            包含超时
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CoroutineStack.SetError(System.Exception)">
+            <summary>
+            true=继续执行后面的协程， false=停止协程
+            </summary>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC6.UnityEngine.CortoutineState">
+            <summary>
+            协程运行过程状态
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CortoutineState.None">
+            <summary>
+            未执行
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CortoutineState.Sleep">
+            <summary>
+            休眠中
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CortoutineState.Running">
+            <summary>
+            运行中
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.CortoutineState.Ended">
+            <summary>
+            执行结束
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.GlobelManager">
+            <summary>
+            全局管理
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.#ctor">
+            <summary>
+            (构造函数) 全局管理
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_CoreBehavioutr">
+            <summary>
+            核心行为处理类
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.GlobelManager.CoreBehavioutr">
+            <summary>
+            核心行为处理类
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.GlobelManager.Instance">
+            <summary>
+            实例
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.GlobelManager.Runding">
+            <summary>
+            运行中
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.GlobelManager.DebugEnabled">
+            <summary>
+            调试激活
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_LastWaitMis">
+            <summary>
+            上一次暂停的时间(微秒)
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_MonoBehaviourList_Awake">
+            <summary>
+            (第一步) 需要初始化的对象
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_MonoBehaviourList_AwakeAfter">
+            <summary>
+            (第二步) 初始化后的对象
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_MonoBehaviourList_Start">
+            <summary>
+            (第三步) 未执行 Start 的对象
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_MonoBehaviourList">
+            <summary>
+            (第四步) 正常的行为对象.
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_NewItemsQueue">
+            <summary>
+            新增列队 - 临时进列队的对象, 还未处理
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_DeleteItemsQueue">
+            <summary>
+            删除列队 - 临时进列队的对象, 还未处理
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.Add(EC6.UnityEngine.MonoBehaviour)">
+            <summary>
+            添加
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.Remove(EC6.UnityEngine.MonoBehaviour)">
+            <summary>
+            移除
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.RemoveCoroutine(EC6.UnityEngine.MonoBehaviour)">
+            <summary>
+            删除这个对象对应的协程
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="F:EC6.UnityEngine.GlobelManager.m_PreBehaSW">
+            <summary>
+            处理动作的计时器
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.PreBehaviourList">
+            <summary>
+            处理动作集合
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.PreAwakeList">
+            <summary>
+            处理刚刚进列队的集合
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.PreAwakeEnabledList">
+            <summary>
+            处理已经初始化, 未激活的对象
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.PreStartList">
+            <summary>
+            处理已经初始化, 未激活的对象
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.ClearNodes(System.Collections.Generic.LinkedList{EC6.UnityEngine.MonoBehaviour})">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.GlobelManager.PreBehaviourMethods(System.Collections.Generic.LinkedList{EC6.UnityEngine.MonoBehaviour},System.Reflection.MethodInfo)">
+            <summary>
+            执行动作函数
+            </summary>
+            <param name="items"></param>
+            <param name="method"></param>
+        </member>
+        <member name="T:EC6.UnityEngine.Behaviour">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Behaviour.enabled">
+            <summary>
+            激活.默认激活
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Behaviour.IsActiveAndEnabled">
+            <summary>
+            Has the Behaviour had enabled called.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EC6.UnityEngine.Coroutine">
+            <summary>
+            协程
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.Current">
+            <summary>
+            当前协程对象
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.FindItem(System.String)">
+            <summary>
+            查询当前所有自定义参数
+            </summary>
+            <param name="itemKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.#ctor">
+            <summary>
+            (构造函数) 协程
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.#ctor(System.Collections.IEnumerator)">
+            <summary>
+            (构造函数) 协程
+            </summary>
+            <param name="enumerator"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.#ctor(System.Collections.IEnumerator,System.Single)">
+            <summary>
+            (构造函数) 协程
+            </summary>
+            <param name="enumerator"></param>
+            <param name="timeoutS">超时时间</param>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.ReleaseCoroutine(System.Collections.IEnumerator)">
+            <summary>
+            释放内存
+            </summary>
+            <param name="ptr"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.HasItems">
+            <summary>
+            是否存在 items 项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.Items">
+            <summary>
+            自定义参数
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.State">
+            <summary>
+            运行状态
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.IsRunding">
+            <summary>
+            运行中.
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.IsEnded">
+            <summary>
+            已经结束
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.UID">
+            <summary>
+            协程的唯一 id
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.ID">
+            <summary>
+            每一个协程指令的id
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.Error">
+            <summary>
+            运行过程中的错误.
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.TimeStart">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.TimeEnd">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.Result">
+            <summary>
+            反馈对象
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.Text">
+            <summary>
+            文字描述
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.LimitTime">
+            <summary>
+            超时期限
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.HasLimitTime">
+            <summary>
+            包含超时
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Coroutine.NextTimeLog">
+            <summary>
+            下一个次日志
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.SetTimeout(System.Single)">
+            <summary>
+            设置超时时间
+            </summary>
+            <param name="timeoutS">超时时间, 单位:秒</param>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.SetTimeout(EC6.UnityEngine.Timeout)">
+            <summary>
+            设置超时时间
+            </summary>
+            <param name="timeout">超时时间设置</param>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.OnStart">
+            <summary>
+            开始
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.SetError(System.Exception)">
+            <summary>
+            设置错误
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="F:EC6.UnityEngine.Coroutine.Ended">
+            <summary>
+            协程结束, 触发的事件
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.OnEnded">
+            <summary>
+            触发协程结束的事件
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Coroutine.CustomDispose">
+            <summary>
+            自定义释放
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.CustomYieldInstruction">
+            <summary>
+              <para>Base class for custom yield instructions to suspend coroutines.</para>
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CustomYieldInstruction.keepWaiting">
+            <summary>
+              <para>Indicates if coroutine should be kept suspended.</para>
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.CustomYieldInstruction.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CustomYieldInstruction.MoveNext">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.CustomYieldInstruction.Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CustomYieldInstruction.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CustomYieldInstruction.DisposeBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.CustomYieldInstruction.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.CustomYieldInstruction.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.MonoBehaviour">
+            <summary>
+            行为 (每个对象附带一个行为)
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.NewID">
+            <summary>
+            获取当前对象的唯一 id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC6.UnityEngine.MonoBehaviour.UID">
+            <summary>
+            行为对象的唯一ID
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.MonoBehaviour.Text">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.#ctor">
+            <summary>
+            (构造函数) 行为
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.#ctor(System.String)">
+            <summary>
+            (构造函数) 行为
+            </summary>
+            <param name="text">描述</param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.StartCoroutine(System.Collections.IEnumerator,System.Single)">
+            <summary>
+            一个协同程序在执行过程中,可以在任意位置使用 yield 语句。
+            yield 的返回值控制何时恢复协同程序向下执行。
+            协同程序在对象自有帧执行过程中堪称优秀。
+            协同程序在性能上没有更多的开销。
+            StartCoroutine函数是立刻返回的,但是yield可以延迟结果。
+            直到协同程序执行完毕。
+            </summary>
+            <param name="routine"></param>
+            <param name="timeoutS"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.StartCoroutine(EC6.UnityEngine.Coroutine)">
+            <summary>
+            一个协同程序在执行过程中,可以在任意位置使用 yield 语句。
+            </summary>
+            <param name="coroutine"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.StartCoroutineManaged2(System.Collections.IEnumerator,System.Single)">
+            <summary>
+            开始携程管理, 进行包装
+            </summary>
+            <param name="enumerator"></param>
+            <param name="timeoutS"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.StartCoroutine(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="methodName"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.IsInvoking(System.String)">
+            <summary>
+            某指定函数是否在等候调用。
+            </summary>
+            <param name="methodName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.CancelInvoke">
+            <summary>
+            取消这个MonoBehaviour上的所有调用Invoke。 
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.CancelInvoke(System.String)">
+            <summary>
+            取消这个MonoBehaviour上的所有调用Invoke。 
+            </summary>
+            <param name="methodName"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.InvokeRepeating(System.String,System.Single,System.Single)">
+            <summary>
+            从第一次调用开始,每隔repeatRate时间调用一次.
+            </summary>
+            <param name="methodName"></param>
+            <param name="time"></param>
+            <param name="repeatRate"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.Invoke(System.String,System.Single)">
+            <summary>
+            在 time 秒之后，调用 methodName 方法；
+            </summary>
+            <param name="methodName"></param>
+            <param name="time"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.StopCoroutine(System.String)">
+            <summary>
+            停止协程
+            </summary>
+            <param name="methodName"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.StopCoroutine(System.Collections.IEnumerator)">
+            <summary>
+            
+            </summary>
+            <param name="routine"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.StopCoroutine(EC6.UnityEngine.Coroutine)">
+            <summary>
+            停止协程
+            </summary>
+            <param name="routine"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.StopAllCoroutines">
+            <summary>
+            停止全部协程
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.FixedUpdate">
+            <summary>
+            处理 Rigidbody 时，需要用FixedUpdate代替Update。
+            例如:给刚体加一个作用力时，你必须应用作用力在FixedUpdate里的固定帧，而不是Update中的帧。(两者帧长不同)
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.Update">
+            <summary>
+            当 MonoBehaviour 实例化完成之后，Update 在每一帧被调用。
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.LateUpdate">
+            <summary>
+            LateUpdate 是在所有 Update 函数调用后被调用。
+            这可用于调整脚本执行顺序。
+            例如:当物体在Update里移动时，跟随物体的相机可以在LateUpdate里实现。
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.OnPreUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.OnPreFixedUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.OnPreLateUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.Awake">
+            <summary>
+            Awake 用于在游戏开始之前初始化变量或游戏状态。
+            在脚本整个生命周期内它仅被调用一次。
+            Awake 在所有对象被初始化之后调用，所以你可以安全的与其他对象对话或用诸如 GameObject.FindWithTag 这样的函数搜索它们。
+            每个游戏物体上的Awke以随机的顺序被调用。
+            因此，你应该用Awake来设置脚本间的引用，并用Start来传递信息Awake总是在Start之前被调用。
+            它不能用来执行协同程序。
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.Start">
+            <summary>
+            Start在behaviour的生命周期中只被调用一次。
+            它和 Awake 的不同是，Start 只在脚本实例被启用时调用。
+            你可以按需调整延迟初始化代码。Awake 总是在Start之前执行。
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.Destroy(System.Single)">
+            <summary>
+            update 后销毁
+            </summary>
+            <param name="seconds"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.Destroy(EC6.UnityEngine.MonoBehaviour,System.Single)">
+            <summary>
+            update 后销毁
+            </summary>
+            <param name="gameObj"></param>
+            <param name="seconds"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.DestroyForTime(EC6.UnityEngine.MonoBehaviour,System.Single)">
+            <summary>
+            延迟销毁
+            </summary>
+            <param name="gameObj"></param>
+            <param name="delaySeconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.DestroyImmediate(EC6.UnityEngine.MonoBehaviour)">
+            <summary>
+            立刻销毁
+            </summary>
+            <param name="gameObj"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.OnDestroy">
+            <summary>
+            销毁的时候触发
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.OnPreDestroy">
+            <summary>
+            触发执行销魂指令
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.MonoBehaviour.DelayToInvokeDo(System.Action{System.Object},System.Object,System.Single)">
+            <summary>
+            延时执行
+            </summary>
+            <param name="action">执行的委托</param>
+            <param name="obj">委托的参数</param>
+            <param name="delaySeconds">延时等待的秒数</param>
+        </member>
+        <member name="T:EC6.UnityEngine.Object">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Object.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Object.Destroy(EC6.UnityEngine.Object,System.Single)">
+            <summary>
+            销魂对象
+            </summary>
+            <param name="obj"></param>
+            <param name="t"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.Object.DisposeBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Object.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.Object.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.Time">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.Time.m_FramerateStopwatch">
+            <summary>
+            帧的计时器
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Time.MicroSeconds">
+            <summary>
+            返回当前微秒
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Time.MilliSecond">
+            <summary>
+            返回当前毫秒
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Time.realtimeSinceStartup">
+            <summary>
+            返回当前毫秒
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Time.timeScale">
+            <summary>
+            时间缩放，默认值为1。
+            若设置: 小于 1，表示时间减慢；若设置 大于1,表示时间加快；若设置=0，则游戏暂停。
+            可以用来加速、减速和暂停游戏，非常有用。
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.Time.FramerateEnd">
+            <summary>
+            重新开始帧
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.Time.deltaTime">
+            <summary>
+            当前帧与上一帧经过的时间
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.UnityWebRequest">
+            <summary>
+            web 请求
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.UnityWebRequest.timeout">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.UnityWebRequest.SendWebRequest">
+            <summary>
+            发送协程请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC6.UnityEngine.UnityWebRequest.GetAssetBundle">
+            <summary>
+            将AssetBundle加载到缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EC6.UnityEngine.AssetBundle">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.WaitAsyncTaskManager">
+            <summary>
+            异步线程管理类
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTaskManager.m_Instance">
+            <summary>
+            实例
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.Instance">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.MaxThreadCount">
+            <summary>
+            线程数
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.WorkerCount">
+            <summary>
+            当前的工作线程数
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTaskManager.m_TotalCount">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTaskManager.m_ExecCount">
+            <summary>
+            排队的数量
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTaskManager.m_CompleteCount">
+            <summary>
+            完成数
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTaskManager.m_OvertimeCount">
+            <summary>
+            超时的数量
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.CurentCount">
+            <summary>
+            当前数量
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.ErrorCount">
+            <summary>
+            错误数
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.OvertimeCount">
+            <summary>
+            超时的数量
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.TotalCount">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.ExecCount">
+            <summary>
+            已经在执行的数量
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.CompleteCount">
+            <summary>
+            完成总数
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTaskManager.IsRunding">
+            <summary>
+            运行中
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTaskManager.m_Runding">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTaskManager.m_ItemQueue">
+            <summary>
+            列队
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTaskManager.Start">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTaskManager.Stop">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTaskManager.Add(EC5.WindowService.EcTaskItemBase)">
+            <summary>
+            添加进列队
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="T:EC6.UnityEngine.WaitAsyncTask`1">
+            <summary>
+            异步任务
+            </summary>
+            <typeparam name="TResult"></typeparam>
+        </member>
+        <member name="F:EC6.UnityEngine.WaitAsyncTask`1.m_IsQueueAdded">
+            <summary>
+            添加进列队
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask`1.#ctor(System.Func{`0})">
+            <summary>
+            (构造函数) 异步任务
+            </summary>
+            <param name="function"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask`1.#ctor(System.Func{System.Object,`0},System.Object)">
+            <summary>
+            (构造函数) 异步任务
+            </summary>
+            <param name="function"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask`1.#ctor(System.Func{`0},System.Single)">
+            <summary>
+            (构造函数) 异步任务
+            </summary>
+            <param name="function"></param>
+            <param name="timeoutS"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask`1.#ctor(System.Func{System.Object,`0},System.Object,System.Single)">
+            <summary>
+            (构造函数) 异步任务
+            </summary>
+            <param name="function"></param>
+            <param name="state"></param>
+            <param name="timeoutS"></param>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask`1.TimeoutS">
+            <summary>
+            超时的毫秒数
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitAsyncTask`1.MoveNext">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask`1.keepWaiting">
+            <summary>
+            持续等待
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask`1.isDone">
+            <summary>
+            完成
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask`1.Result">
+            <summary>
+            反馈值
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitAsyncTask`1.Error">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.WaitForSeconds">
+            <summary>
+            等待间隔
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitForSeconds.#ctor(System.Single)">
+            <summary>
+              <para>Creates a yield instruction to wait for a given number of seconds using scaled time.</para>
+            </summary>
+            <param name="seconds">秒</param>
+        </member>
+        <member name="T:EC6.UnityEngine.WaitForSecondsRealtime">
+            <summary>
+              <para>Suspends the coroutine execution for the given amount of seconds using unscaled time.</para>
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitForSecondsRealtime.waitTime">
+            <summary>
+              <para>The given amount of seconds that the yield instruction will wait for.</para>
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitForSecondsRealtime.keepWaiting">
+            <summary>
+            指示是否应暂停协作。
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitForSecondsRealtime.#ctor(System.Single)">
+            <summary>
+              <para>Creates a yield instruction to wait for a given number of seconds using unscaled time.</para>
+            </summary>
+            <param name="time"></param>
+        </member>
+        <member name="T:EC6.UnityEngine.WaitUntil">
+            <summary>
+             条件不成立时, 通过..
+              <para>Suspends the coroutine execution until the supplied delegate evaluates to true.</para>
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitUntil.keepWaiting">
+            <summary>
+            指示是否应暂停协作。
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitUntil.#ctor(System.Func{System.Boolean})">
+            <summary>
+            条件不成立时, 通过..
+            </summary>
+            <param name="predicate"></param>
+        </member>
+        <member name="T:EC6.UnityEngine.WaitWhile">
+            <summary>
+             条件成立时, 通过..
+              <para>Suspends the coroutine execution until the supplied delegate evaluates to false.</para>
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WaitWhile.keepWaiting">
+            <summary>
+            指示是否应暂停协作。
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WaitWhile.#ctor(System.Func{System.Boolean})">
+            <summary>
+            条件成立时, 通过..
+            </summary>
+            <param name="predicate"></param>
+        </member>
+        <member name="T:EC6.UnityEngine.WWW_Http_Post">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW_Http_Post.Error">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW_Http_Post.Encoding">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW_Http_Post.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW_Http_Post.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW_Http_Post.CreatePostHttpResponse(System.String,EC6.UnityEngine.WWWForm,System.Nullable{System.Int32},System.String,System.Text.Encoding,System.Collections.Hashtable,System.Net.CookieCollection,System.Action{EC6.UnityEngine.WWW_Http_Post})">
+            <summary>  
+            创建POST方式的HTTP请求  
+            </summary>  
+            <param name="url">请求的URL</param>  
+            <param name="parameters">随同请求POST的参数名称及参数值字典</param>  
+            <param name="timeout">请求的超时时间</param>  
+            <param name="userAgent">请求的客户端浏览器信息，可以为空</param>  
+            <param name="requestEncoding">发送HTTP请求时所用的编码</param>  
+            <param name="cookies">随同HTTP请求发送的Cookie信息，如果不需要身份验证可以为空</param>  
+            <returns></returns>  
+        </member>
+        <member name="M:EC6.UnityEngine.WWW_Http_Post.Dispose(System.Boolean)">
+            <summary>
+            释放
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW_Http_Post.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.WWW_Http_Get">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW_Http_Get.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW_Http_Get.CreateGetHttpResponse(System.String,System.Nullable{System.Int32},System.String,System.Collections.Hashtable,System.Net.CookieCollection,System.Action{EC6.UnityEngine.WWW_Http_Get})">
+            <summary>  
+            创建GET方式的HTTP请求  
+            </summary>  
+            <param name="url">请求的URL</param>  
+            <param name="timeout">请求的超时时间</param>  
+            <param name="userAgent">请求的客户端浏览器信息，可以为空</param>
+            <param name="headers"></param>  
+            <param name="cookies">随同HTTP请求发送的Cookie信息，如果不需要身份验证可以为空</param>
+            <param name="callback"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:EC6.UnityEngine.WWW_Http_Get.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.WWW">
+            <summary>
+            注:准备作废, 以 UnityWebRequest 
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW.#ctor">
+            <summary>
+            (构造函数)
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW.#ctor(System.String)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW.#ctor(System.String,EC6.UnityEngine.WWWForm)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="url"></param>
+            <param name="from"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW.#ctor(System.String,EC6.UnityEngine.WWWForm,System.Collections.Hashtable)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="url"></param>
+            <param name="form"></param>
+            <param name="headers"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW.#ctor(System.String,System.Collections.Hashtable)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="url"></param>
+            <param name="headers"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW.Finalize">
+            <summary>
+            释放
+            </summary>
+        </member>
+        <member name="F:EC6.UnityEngine.WWW.m_RespStream">
+            <summary>
+            反馈回来的数据流
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.Url">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.Text">
+            <summary>
+            通过网页获取并以字符串的形式返回内容(只读)。
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.bytes">
+            <summary>
+            以字节组的形式返回获取到的网络页面中的内容(只读)。
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.EncodingName">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.RawError">
+            <summary>
+            原始错误对象
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.error">
+            <summary>
+            返回一个错误消息，在下载期间如果产生了一个错误的话。(只读)
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.isDone">
+            <summary>
+            判断下载是否已经完成(只读)？
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.progress">
+            <summary>
+            下载进度有多少
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.uploadProgress">
+            <summary>
+            上传进度有多少
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWW.keepWaiting">
+            <summary>
+            等待
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWW.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.WWWForm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WWWForm.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWWForm.headers">
+            <summary>
+            头部
+            </summary>
+        </member>
+        <member name="P:EC6.UnityEngine.WWWForm.data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.WWWForm.AddField(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            添加一个简单的域到表单。
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWWForm.AddField(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWWForm.AddBinaryData(System.String,System.Byte[],System.String,System.String)">
+            <summary>
+            添加二进制数据到表单。
+            </summary>
+            <param name="key"></param>
+            <param name="contents"></param>
+            <param name="fileName"></param>
+            <param name="mimeType"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWWForm.Dispose(System.Boolean)">
+            <summary>
+            释放
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.WWWForm.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:EC6.UnityEngine.YieldInstruction">
+            <summary>
+            yield 指令
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.YieldInstruction.Finalize">
+            <summary>
+            释放
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.YieldInstruction.CustomDispose">
+            <summary>
+            自定义释放
+            </summary>
+        </member>
+        <member name="M:EC6.UnityEngine.YieldInstruction.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EC6.UnityEngine.YieldInstruction.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+    </members>
+</doc>

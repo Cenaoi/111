@@ -1,0 +1,1710 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EC5.WindowService.ThreadFun</name>
+    </assembly>
+    <members>
+        <member name="T:EC5.WindowService.FuncE0">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:EC5.WindowService.FuncE1`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="e"></param>
+            <param name="t0"></param>
+        </member>
+        <member name="T:EC5.WindowService.FuncE2`2">
+            <summary>
+            
+            </summary>
+            <typeparam name="T0"></typeparam>
+            <typeparam name="T1"></typeparam>
+            <param name="e"></param>
+            <param name="t0"></param>
+            <param name="t1"></param>
+        </member>
+        <member name="T:EC5.WindowService.FuncE3`3">
+            <summary>
+            
+            </summary>
+            <typeparam name="T0"></typeparam>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="e"></param>
+            <param name="t0"></param>
+            <param name="t1"></param>
+            <param name="t2"></param>
+        </member>
+        <member name="T:EC5.WindowService.FuncE4`4">
+            <summary>
+            
+            </summary>
+            <typeparam name="T0"></typeparam>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <param name="e"></param>
+            <param name="t0"></param>
+            <param name="t1"></param>
+            <param name="t2"></param>
+            <param name="t3"></param>
+        </member>
+        <member name="T:EC5.WindowService.EcEventArgs">
+            <summary>
+            事件数据类
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcEventArgs.Empty">
+            <summary>
+            空参数
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcEventArgs.#ctor">
+            <summary>
+            (构造方法)事件数据类
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcEventArgs.#ctor(System.Exception)">
+            <summary>
+            (构造方法)事件数据类
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcEventArgs.Exception">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcConcurrentPriorityQueue`1">
+            <summary>
+            分区 5个档次的列队
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+        </member>
+        <member name="M:EC5.WindowService.EcConcurrentPriorityQueue`1._GetItemQueue(EC5.WindowService.EcQueuePriority)">
+            <summary>
+            获取列队
+            </summary>
+            <param name="priority"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WindowService.EcConcurrentPriorityQueue`1.Count">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcConcurrentPriorityQueue`1.Enqueue(`0)">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcConcurrentPriorityQueue`1.Enqueue(`0,EC5.WindowService.EcQueuePriority)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="priority"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcConcurrentPriorityQueue`1.EnqueueItems(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcConcurrentPriorityQueue`1.EnqueueItems(System.Collections.Generic.IEnumerable{`0},EC5.WindowService.EcQueuePriority)">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="items"></param>
+            <param name="priority">优先级</param>
+        </member>
+        <member name="M:EC5.WindowService.EcConcurrentPriorityQueue`1.TryDequeue(`0@)">
+            <summary>
+            尝试获取列队条目
+            </summary>
+            <param name="item">条目</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcConcurrentPriorityQueue`1.TryDequeue(`0@,System.Collections.Concurrent.ConcurrentQueue{`0}@)">
+            <summary>
+            尝试获取列队的条目
+            </summary>
+            <param name="item">条目</param>
+            <param name="itemQueue">列队条目</param>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WindowService.EcConcurrentQueueBase`1.Count">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcConcurrentQueueBase`1.Enqueue(`0)">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="T:EC5.WindowService.FunDelegate">
+            <summary>
+            接受消息回调函数
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFun">
+            <summary>
+            后台读取数据 + 界面执行代码
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.#ctor">
+            <summary>
+            后台读取数据 + 界面执行代码
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.#ctor(System.String)">
+            <summary>
+            后台读取数据 + 界面执行代码
+            </summary>
+            <param name="groupName">组名称，默认 Common</param>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.#ctor(System.Int64,System.String)">
+            <summary>
+            后台读取数据 + 界面执行代码
+            </summary>
+            <param name="overtime"></param>
+            <param name="groupName"></param>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_State">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_IsCommon">
+            <summary>
+            是否为公共
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.Text">
+            <summary>
+            描述文本
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_ExceptionDelegate">
+            <summary>
+            异常错误产生的错误
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_InGroupTime">
+            <summary>
+            进列队的时间
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_Overtime">
+            <summary>
+            超时，单位(毫秒)
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_WarmSpan">
+            <summary>
+            警告间隔
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_WarmTimeStart">
+            <summary>
+            开始计算警告时间
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_SheepTime">
+            <summary>
+            开始执行的时间
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_SetTime">
+            <summary>
+            用于判断是否超时的标记
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_AutoReboot">
+            <summary>
+            自动重启
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_WarmCount">
+            <summary>
+            警告的次数
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_MaxWarmCount">
+            <summary>
+            最大警告次数
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.TimeStart">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.AutoReboot">
+            <summary>
+            自动重启
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.MaxWarmCount">
+            <summary>
+            最大警告次数, 然后配合自动重启.或丢弃命令
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.WarmCount">
+            <summary>
+            警告次数
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.WarmSpan">
+            <summary>
+            警告间隔..默认=0, 不发出警告
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.WarmReset">
+            <summary>
+            警告重置
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.ResetOvertimeMs(System.Int64)">
+            <summary>
+            重置超时时间
+            </summary>
+            <param name="timeoutMs"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.Overtime">
+            <summary>
+            超时时间0=无限，单位(毫秒) 默认=30秒.
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.Set">
+            <summary>
+            重新设置时间
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.InGroupTime">
+            <summary>
+            进列队的时间
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.GroupName">
+            <summary>
+            组名称，作为多线程的管理
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.SetFun(EC5.WindowService.FunDelegate)">
+            <summary>
+            设置执行函数
+            </summary>
+            <param name="fun"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.SetBllFun(System.Object,System.Object[],System.Delegate)">
+            <summary>
+            设置业务方法，带线程运行
+            </summary>
+            <param name="bllObject"></param>
+            <param name="bllParams"></param>
+            <param name="bllDelegate"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.SetBllFun(System.Object[],System.Delegate)">
+            <summary>
+            设置业务方法，带线程运行
+            </summary>
+            <param name="bllParams"></param>
+            <param name="bllDelegate"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.SetExceptionFun(System.Delegate)">
+            <summary>
+            设置异常回调
+            </summary>
+            <param name="excptionDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.SetBllFun(System.Delegate)">
+            <summary>
+            设置业务方法，带线程运行
+            </summary>
+            <param name="bllDelegate"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.State">
+            <summary>
+            执行任务的状态
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.BizInvoke(System.Boolean@)">
+            <summary>
+            执行调用业务层
+            </summary>
+            <param name="success"></param>
+            <returns></returns>
+        </member>
+        <member name="E:EC5.WindowService.EcFun.Ended">
+            <summary>
+            触发结束事件
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_HasOnEnded">
+            <summary>
+            已经触发断开事件?
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.OnEnded">
+            <summary>
+            触发结束事件
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.Remoted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.RunThread">
+            <summary>
+            运行前奏
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.IsWarming">
+            <summary>
+            是否发出警告
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:EC5.WindowService.EcFun.m_QueueEnded">
+            <summary>
+            专门给 EcWhileQueue 使用
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.ProRunFun_Thread">
+            <summary>
+            处理开始运行.带线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.OnProException">
+            <summary>
+            触发超时的异常
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.ProRunFun">
+            <summary>
+            处理开始运行.不带线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.IsTimeout">
+            <summary>
+            是否已经超时
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.Tag">
+            <summary>
+            自定义扩展标记.
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.AutoClear">
+            <summary>
+            自动清除空线程
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFun.FreeTimeMs">
+            <summary>
+            空闲时间超过 n 毫秒, 才进行清理
+            </summary>
+        </member>
+        <member name="E:EC5.WindowService.EcFun.Disposed">
+            <summary>
+            释放事件
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.OnDisposed">
+            <summary>
+            触发释放事件
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFun.Clone">
+            <summary>
+            克隆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WindowService.EcFuncItemBase`1.Result">
+            <summary>
+            反馈值
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFuncItem`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TResult"></typeparam>
+        </member>
+        <member name="P:EC5.WindowService.EcFuncItem`1.Func">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFuncItem`1.Exec">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFuncItem`2">
+            <summary>
+            
+            </summary>
+            <typeparam name="ItemValueT"></typeparam>
+            <typeparam name="TResult"></typeparam>
+        </member>
+        <member name="P:EC5.WindowService.EcFuncItem`2.Func">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFuncItem`2.Exec">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFunListThread">
+            <summary>
+            带线程的 EcFunList；属二级线程。
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunListThread.m_StartThread">
+            <summary>
+            已经启动线程
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunListThread.m_FunList">
+            <summary>
+            操作任务集合
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunListThread.m_GroupName">
+            <summary>
+            线程组名称
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunListThread.GroupName">
+            <summary>
+            线程组名称
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunListThread.IsCommon">
+            <summary>
+            公共线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.IsEmpty">
+            <summary>
+            线程组已经为空
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.CurFun">
+            <summary>
+            当前线程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WindowService.EcFunListThread.FunList">
+            <summary>
+            操作任务集合
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.Warn(EC5.WindowService.EcFun)">
+            <summary>
+            警告
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.Enqueue(EC5.WindowService.EcFun)">
+            <summary>
+            把操作放入列队..
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="F:EC5.WindowService.EcFunListThread.m_CreateThreadLockTag">
+            <summary>
+            创建线程的临时锁
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.PreStarthThread">
+            <summary>
+            创建线程的锁
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunListThread.m_ThreadFun">
+            <summary>
+            当前列队里面的线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.RunThreadFun">
+            <summary>
+            运行列队的线程
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunListThread.m_TimeEmpty">
+            <summary>
+            开始空闲的时间, 准备用于回收的..
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunListThread.TimeEmpty">
+            <summary>
+            开始空闲的时间, 准备用于回收的..
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunListThread.AutoClear">
+            <summary>
+            自动清除空线程
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunListThread.AutoRestart">
+            <summary>
+            发生错误的时候, 自动重启线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.IsRun">
+            <summary>
+            是否在运行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.Start">
+            <summary>
+            开始线程
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunListThread.m_IsPreTimeout">
+            <summary>
+            在处理超时的数据
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.PreCheck(EC5.WindowService.EcFun)">
+            <summary>
+            检查函数是否有异常
+            </summary>
+            <param name="fun"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcFunListThread.Stop">
+            <summary>
+            停止线程
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFunMangeGlobel">
+            <summary>
+            异步调用管理器，顺序执行
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_Items">
+            <summary>
+            字典集合（线程安全）
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_AutoClearEmptyGroup">
+            <summary>
+            自动清理空白组
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunMangeGlobel.AutoClearEmptyGroup">
+            <summary>
+            自动清理空白组
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunMangeGlobel.IsThread">
+            <summary>
+            是否启动线程。默认:false
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunMangeGlobel.ThreadCount">
+            <summary>
+            线程数量
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunMangeGlobel.ThreadItemCount">
+            <summary>
+            子线程排队数
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.Add(EC5.WindowService.EcFun)">
+            <summary>
+            把作业放入线程进行排队运行
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_StartThread">
+            <summary>
+            已经启动线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.Main_StartAutoShell">
+            <summary>
+            总线程-启动自动执行的线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.Clear">
+            <summary>
+            清理所有进程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.Clear(System.String)">
+            <summary>
+            清理所有进程
+            </summary>
+            <param name="threadName"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.StopAutoShell">
+            <summary>
+            停止执行
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.AutoShell_Thread">
+            <summary>
+            主线程：自动执行
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.Stop2ThreadAll">
+            <summary>
+            停止所有二级线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.LoopShell_AutoStart">
+            <summary>
+            自动启动线程执行(作废)
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_LastTimeForceGroup">
+            <summary>
+            自动强制清理空线程
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_MustClearTimeSpan">
+            <summary>
+            间隔时间后强制执行清除
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_NextTimeMustClear">
+            <summary>
+            下一次清理的时间
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_WhileItems">
+            <summary>
+            While 的线程列队
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.LoopShell">
+            <summary>
+            循环判断还有多少剩余线程需要执行
+            </summary>
+            <remarks>
+            1、如果已经运行结束，就弹出扔掉
+            2、如果未开始运行，就进行 Shell() 命令
+            </remarks>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_EndedFuns">
+            <summary>
+            已经结束的列队....需要触发事件..
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunMangeGlobel.m_ErrorFunLists">
+            <summary>
+            错误的列队
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunMangeGlobel.LoopShell_AutoClearEmptyGroup">
+            <summary>
+            自动清除空执行组
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFunQueue`1">
+            <summary>
+            普通单线程列队
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+        </member>
+        <member name="P:EC5.WindowService.EcFunQueue`1.AutoResetEventMs">
+            <summary>
+            自动重置的时间间隔
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunQueue`1.m_NextTimeStop">
+            <summary>
+            停止延迟时间
+            </summary>
+            <remarks>
+            (警告) 这个时间是一个非常关键的标记, 不能删除.
+            </remarks>
+        </member>
+        <member name="M:EC5.WindowService.EcFunQueue`1.#ctor(System.Action{`0})">
+            <summary>
+            (构造函数) 普通单线程列队
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcFunQueue`1.ContinueWith(System.Action{EC5.WindowService.EcFunQueue{`0},`0,System.Exception})">
+            <summary>
+            终止线程
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcFunQueue`1.Text">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunQueue`1.Enqueue(`0)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcFunQueue`1.WaitOne">
+            <summary>
+            阻止当前线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunQueue`1.Set">
+            <summary>
+            继续
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunQueue`1.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunQueue`1.IsRunding">
+            <summary>
+            运行中...
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunQueue`1.Overtime">
+            <summary>
+            超时
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunQueue`1.Current">
+            <summary>
+            当前处理的项目
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunQueue`1.Error">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunQueue`1.Start">
+            <summary>
+            启动线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunQueue`1.Stop">
+            <summary>
+            停止线程
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFunStatus">
+            <summary>
+            执行的状态
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunStatus.None">
+            <summary>
+            没有任何处理
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunStatus.Runing">
+            <summary>
+            执行过程
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunStatus.End">
+            <summary>
+            运行结束
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFunWhileConditionDelegate">
+            <summary>
+            接受消息回调函数
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:EC5.WindowService.EcFunWaitType">
+            <summary>
+            等待类型
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWaitType.Manual">
+            <summary>
+            手动模式
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWaitType.Auto">
+            <summary>
+            自动模式
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcFunWhile">
+            <summary>
+            内循环
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_NewWhereID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_Condition">
+            <summary>
+            条件
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_SubFun">
+            <summary>
+            循环的过程
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_IntervalFun">
+            <summary>
+            间隔触发函数
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.Interval">
+            <summary>
+            间隔(毫秒)
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_Runding">
+            <summary>
+            运行中
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_SubTimeout">
+            <summary>
+            子过程暂停的时间
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.WaitType">
+            <summary>
+            等待模式..
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.AutoWaitTimeMs">
+            <summary>
+            自动等待模式下, 等待的时间
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.SetInterval(System.Int32,EC5.WindowService.EcFunWhileSubDelegate)">
+            <summary>
+            设置间隔触发函数
+            </summary>
+            <param name="interval">间隔 (毫秒)</param>
+            <param name="fun">函数</param>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.SubTimeout">
+            <summary>
+            子过程暂停的时间(毫秒)
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.Overtime">
+            <summary>
+            线程超时
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.ResetOvertimeMs(System.Int64)">
+            <summary>
+            重置超时时间
+            </summary>
+            <param name="timeoutMs"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.HasCondition">
+            <summary>
+            包含条件函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.HasSubFun">
+            <summary>
+            包含子函数
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.Condition">
+            <summary>
+            条件
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.SubFun">
+            <summary>
+            子过程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.Run">
+            <summary>
+            开始运行
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_ManualRE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_AutoRE">
+            <summary>
+            自动等待
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcFunWhile.m_IsWaitOne">
+            <summary>
+            释放阻止当前线程
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.IsRunding">
+            <summary>
+            运行中...
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.Stop">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.WaitOne">
+            <summary>
+            阻止当前线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.Set">
+            <summary>
+            继续
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcFunWhile.ExecCondition(System.Exception@)">
+            <summary>
+            执行条件...
+            </summary>
+            <param name="err">错误信息</param>
+            <returns>true=条件成立,可以继续运行...false=条件不成立,挑出</returns>
+        </member>
+        <member name="E:EC5.WindowService.EcFunWhile.Ended">
+            <summary>
+            事件结束
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcFunWhile.IsDisposed">
+            <summary>
+            已经释放内存
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcLinkedList`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:EC5.WindowService.EcLinkedList`1.#ctor">
+            <summary>
+            (构造函数) 
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLinkedList`1.AddLast(`0)">
+            <summary>
+            添加项目
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcLinkedList`1.Remove(`0)">
+            <summary>
+            移除第一个匹配的对象
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcLinkedList`1.Remove(System.Collections.Generic.LinkedListNode{`0})">
+            <summary>
+            移除第一个匹配的对象
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcLinkedList`1.Count">
+            <summary>
+            实际包含的数量
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLinkedList`1.Exec(System.Func{`0,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="T:EC5.WindowService.EcWhileQueueItemDelegate`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+            <param name="sender"></param>
+            <param name="item"></param>
+        </member>
+        <member name="T:EC5.WindowService.EcWhileQueueItemF0Delegate`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+            <param name="item"></param>
+        </member>
+        <member name="T:EC5.WindowService.EcWhileQueueItemPrecoditionEventArgs`1">
+            <summary>
+            前置条件参数
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+        </member>
+        <member name="P:EC5.WindowService.EcWhileQueueItemPrecoditionEventArgs`1.Item">
+            <summary>
+            项目 
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcWhileQueueItemPrecoditionF0Delegate`1">
+            <summary>
+            前置条件
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+            <param name="e"></param>
+        </member>
+        <member name="T:EC5.WindowService.EcWhileQueueItemPrecoditionDelegate`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:EC5.WindowService.EcQueuePriority">
+            <summary>
+            列队优先权
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcQueuePriority.Lowest">
+            <summary>
+            可以安排在具有任何其他优先级的线程之后。
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcQueuePriority.BelowNormal">
+            <summary>
+            可以安排在使用的线程之后 Normal 优先级之前 Lowest 优先级。
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcQueuePriority.Normal">
+            <summary>
+            可以安排在使用的线程之后 AboveNormal 优先级之前 BelowNormal 优先级。 线程所具有的 Normal 默认优先级。
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcQueuePriority.AboveNormal">
+            <summary>
+            可以安排在使用的线程之后 Highest 优先级之前 Normal 优先级。
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcQueuePriority.Highest">
+            <summary>
+            可以安排在具有任何其他优先级的线程之前。
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcTaskItem">
+            <summary>
+            线程值
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItem.#ctor">
+            <summary>
+            (构造函数)
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItem.#ctor(System.Action)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItem.#ctor(System.Action,System.Single)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="action"></param>
+            <param name="timeoutMs"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItem.Action">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItem.Exec">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcTaskItem`1">
+            <summary>
+            线程值
+            </summary>
+            <typeparam name="ItemValueT"></typeparam>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItem`1.#ctor">
+            <summary>
+            (构造函数)
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItem`1.#ctor(System.Action{`0},`0)">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+            <param name="state"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItem`1.#ctor(System.Action{`0},`0,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+            <param name="state"></param>
+            <param name="timeoutMs"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItem`1.Action">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItem`1.State">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItem`1.Exec">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcTaskItemBase">
+            <summary>
+            线程值基类
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItemBase.Exec">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItemBase.#ctor">
+            <summary>
+            (构造函数)
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItemBase.#ctor(System.Single)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="timeoutMs">超时时间,(单位:毫秒)</param>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.TimeoutMs">
+            <summary>
+            超时的毫秒数
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.Error">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.IsFaulted">
+            <summary>
+            未捕获异常的完成
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.IsCanceled">
+            <summary>
+            取消的完成
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.IsCompleted">
+            <summary>
+            完成
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.ExecTimeBegin">
+            <summary>
+            开始处理的时间
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.ExecTimeEnd">
+            <summary>
+            停止处理的时间
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.ExecTimeSpanMs">
+            <summary>
+            执行的时间间隔
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcTaskItemBase.Thread">
+            <summary>
+            对应的线程对象
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItemBase.SetError(System.Exception)">
+            <summary>
+            发生错误, 准备终止线程
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcTaskItemBase.StopThread">
+            <summary>
+            暂停线程
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcWhileQueue`1">
+            <summary>
+            列队
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+        </member>
+        <member name="F:EC5.WindowService.EcWhileQueue`1.m_CurRunding">
+            <summary>
+            单线程情况下,是否在运行
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcWhileQueue`1.MaxSubTimeoutMs">
+            <summary>
+            子过程执行的时间间隔
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcWhileQueue`1.WorkerCount">
+            <summary>
+            工作线程数
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.Enqueue(`0)">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1._GetItemQueue(EC5.WindowService.EcQueuePriority)">
+            <summary>
+            获取列队
+            </summary>
+            <param name="priority"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.Enqueue(`0,EC5.WindowService.EcQueuePriority)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="priority"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.EnqueueItems(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.EnqueueItems(System.Collections.Generic.IEnumerable{`0},EC5.WindowService.EcQueuePriority)">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="items"></param>
+            <param name="priority">优先级</param>
+        </member>
+        <member name="F:EC5.WindowService.EcWhileQueue`1.m_HasPrecodition">
+            <summary>
+            包含前置条件
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.SetFunItemBefore(EC5.WindowService.EcWhileQueueItemPrecoditionDelegate{`0})">
+            <summary>
+            前置条件
+            </summary>
+            <param name="precoditionFun"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.SetFunItemBefore(EC5.WindowService.EcWhileQueueItemPrecoditionF0Delegate{`0})">
+            <summary>
+            前置条件
+            </summary>
+            <param name="precoditionFun"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.SetFunItem(EC5.WindowService.EcWhileQueueItemDelegate{`0})">
+            <summary>
+            执行内容
+            </summary>
+            <param name="subFun"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.SetFunItem(EC5.WindowService.EcWhileQueueItemF0Delegate{`0})">
+            <summary>
+            执行内容
+            </summary>
+            <param name="subFun"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.ContinueWith(System.Action{`0})">
+            <summary>
+            终止线程
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="F:EC5.WindowService.EcWhileQueue`1.m_SubThreads">
+            <summary>
+            子线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.CanExecSubFun">
+            <summary>
+            能执行子线程
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcWhileQueue`1.AutoClearSubThread">
+            <summary>
+            自动清理子线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.CreateSubThread(`0)">
+            <summary>
+            创建子线程
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcWhileQueue`1.ItemCount">
+            <summary>
+            条目总数量
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcWhileQueue`1.SubThreadFreeTimeMs">
+            <summary>
+            子线程的空闲时间就清理..默认30秒空闲时间就清理
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.TryItemPeek(`0@)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.TryItemPeek(`0@,System.Collections.Concurrent.ConcurrentQueue{`0}@)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="itemQueue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.TryItemDequeue(`0@)">
+            <summary>
+            尝试获取列队条目
+            </summary>
+            <param name="item">条目</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcWhileQueue`1.TryItemDequeue(`0@,System.Collections.Concurrent.ConcurrentQueue{`0}@)">
+            <summary>
+            尝试获取列队的条目
+            </summary>
+            <param name="item">条目</param>
+            <param name="itemQueue">列队条目</param>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WindowService.HiResTimer.MicroSeconds">
+            <summary>
+            返回当前微秒
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.HiResTimer.MilliSecond">
+            <summary>
+            返回当前毫秒
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.IFunExecute">
+            <summary>
+            执行函数
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.IFunExecute.Exec">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.IFunTimeout">
+            <summary>
+            超时对象
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.IFunTimeout.TimeoutMs">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.EcLightThreadQueue`1">
+            <summary>
+            轻量级列队
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+        </member>
+        <member name="T:EC5.WindowService.EcLightThreadQueue`1.LightSubQueue`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="ItemT"></typeparam>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.LightSubQueue`1.#ctor(System.Action{`1})">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcLightThreadQueue`1.LightSubQueue`1.ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcLightThreadQueue`1.m_Condition">
+            <summary>
+            运行的条件
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.#ctor">
+            <summary>
+            (构造函数) 
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.#ctor(System.String)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.#ctor(System.Func{System.Boolean})">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="condition"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.#ctor(System.Func{System.Boolean},System.String)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="condition"></param>
+            <param name="text"></param>
+        </member>
+        <member name="F:EC5.WindowService.EcLightThreadQueue`1.m_SubThreads">
+            <summary>
+            子线程
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcLightThreadQueue`1.m_FunMainWhile">
+            <summary>
+            主线程
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcLightThreadQueue`1.m_CurThreads">
+            <summary>
+            当前正在执行的任务
+            </summary>
+        </member>
+        <member name="F:EC5.WindowService.EcLightThreadQueue`1.m_EmptyThreads">
+            <summary>
+            空任务
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.SetFun(System.Action{`0})">
+            <summary>
+            项目
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcLightThreadQueue`1.MaxSubTimeoutMs">
+            <summary>
+            子过程执行的时间间隔
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.SetMinThreads(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="workerThreads"></param>
+            <param name="completionPortThreads"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.SetMaxThreads(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="workerThreads"></param>
+            <param name="completionPortThreads"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcLightThreadQueue`1.WorkerCount">
+            <summary>
+            工作线程数
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.Enqueue(`0)">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.Enqueue(`0,EC5.WindowService.EcQueuePriority)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="priority"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.EnqueueItems(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.EnqueueItems(System.Collections.Generic.IEnumerable{`0},EC5.WindowService.EcQueuePriority)">
+            <summary>
+            将对象添加到 的结尾处。
+            </summary>
+            <param name="items"></param>
+            <param name="priority">优先级</param>
+        </member>
+        <member name="F:EC5.WindowService.EcLightThreadQueue`1.m_ContinueWith">
+            <summary>
+            任务执行完后, 触发的事件
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.ContinueWith(System.Action{`0,System.Exception})">
+            <summary>
+            终止线程
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="P:EC5.WindowService.EcLightThreadQueue`1.IsRunding">
+            <summary>
+            运行中...
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.EcLightThreadQueue`1.ItemCount">
+            <summary>
+            项目数量
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.TryAllot">
+            <summary>
+            尝试分配
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.GetSubThread">
+            <summary>
+            获取子线程的对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.Stop">
+            <summary>
+            暂停
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.WaitOne">
+            <summary>
+            阻止当前线程
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.Set">
+            <summary>
+            继续
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.DisposeBase">
+            <summary>
+            释放
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.EcLightThreadQueue`1.TryItemDequeue(`0@)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WindowService.DisposableObject">
+            <summary>
+            带释放函数的对象
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.DisposableObject.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WindowService.DisposableObject.IsDisposed">
+            <summary>
+            已经释放
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.DisposableObject.DisposeBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.DisposableObject.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:EC5.WindowService.DisposableObject.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:EC5.WindowService.TimeBomb">
+            <summary>
+            时间炸弹(时间间隔触发器)
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.TimeBomb.#ctor(System.Int64)">
+            <summary>
+            (构造函数) 时间炸弹(时间间隔触发器)
+            </summary>
+            <param name="span"></param>
+        </member>
+        <member name="M:EC5.WindowService.TimeBomb.Start">
+            <summary>
+            开始
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.TimeBomb.GetExcessTime">
+            <summary>
+            获取剩余时间
+            </summary>
+        </member>
+        <member name="M:EC5.WindowService.TimeBomb.Restart">
+            <summary>
+            重新开始计算
+            </summary>
+        </member>
+    </members>
+</doc>

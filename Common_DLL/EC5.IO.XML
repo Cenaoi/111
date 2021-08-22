@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EC5.IO</name>
+    </assembly>
+    <members>
+        <member name="T:EC5.IO.HttpErrorResult">
+            <summary>
+            失败的数据包
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpErrorResult.#ctor">
+            <summary>
+            (构造函数)失败的数据包
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpErrorResult.#ctor(System.String)">
+            <summary>
+            (构造函数)失败的数据包
+            </summary>
+            <param name="error_msg">错误信息的描述</param>
+        </member>
+        <member name="M:EC5.IO.HttpErrorResult.#ctor(System.String,System.Object)">
+            <summary>
+            (构造函数)失败的数据包
+            </summary>
+            <param name="error_msg">错误信息的描述</param>
+            <param name="data">附带数据</param>
+        </member>
+        <member name="M:EC5.IO.HttpErrorResult.#ctor(System.String,System.String)">
+            <summary>
+            (构造函数)失败的数据包
+            </summary>
+            <param name="error_code">错误编码</param>
+            <param name="error_msg">错误信息的描述</param>
+        </member>
+        <member name="M:EC5.IO.HttpErrorResult.#ctor(System.String,System.String,System.Object)">
+            <summary>
+            (构造函数)失败的数据包
+            </summary>
+            <param name="error_code">错误编码</param>
+            <param name="error_msg">错误信息的描述</param>
+            <param name="data">附带数据</param>
+        </member>
+        <member name="P:EC5.IO.HttpErrorResult.error_code">
+            <summary>
+            错误编码
+            </summary>
+        </member>
+        <member name="T:EC5.IO.HttpMessage">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpMessage.#ctor">
+            <summary>
+            (构造函数)
+            </summary>
+        </member>
+        <member name="P:EC5.IO.HttpMessage.MsgType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:EC5.IO.HttpMessage.Message">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpMessage.ParseJson(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpMessage.ParseJson(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.IO.HttpResult">
+            <summary>
+            Json 数据包
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpResult.#ctor">
+            <summary>
+            (构造函数) Json 数据包
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpResult.GetTimestamp">
+            <summary>
+            时间戳 (1970 年开始.)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.IO.HttpResult.Timestamp">
+            <summary>
+            数据包创建的时间戳
+            </summary>
+        </member>
+        <member name="P:EC5.IO.HttpResult.Time">
+            <summary>
+            数据包时间
+            </summary>
+        </member>
+        <member name="P:EC5.IO.HttpResult.success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="P:EC5.IO.HttpResult.msg">
+            <summary>
+            成功信息的描述
+            </summary>
+        </member>
+        <member name="P:EC5.IO.HttpResult.error_msg">
+            <summary>
+            错误信息的描述
+            </summary>
+        </member>
+        <member name="P:EC5.IO.HttpResult.data">
+            <summary>
+            附带的数据
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpResult.Success">
+            <summary>
+            成功消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.Success(System.Object)">
+            <summary>
+            成功消息
+            </summary>
+            <param name="data">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.SuccessMsg(System.String)">
+            <summary>
+            成功消息
+            </summary>
+            <param name="msg">消息内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.SuccessMsg(System.String,System.Object)">
+            <summary>
+            成功消息
+            </summary>
+            <param name="msg">消息内容</param>
+            <param name="data">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.Error(System.String)">
+            <summary>
+            错误消息
+            </summary>
+            <param name="error_msg">错误消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.Error">
+            <summary>
+            错误消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.Error(System.String,System.String)">
+            <summary>
+            错误消息
+            </summary>
+            <param name="error_code">错误编码</param>
+            <param name="error_msg">错误消息内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.ParseJson(System.Byte[])">
+            <summary>
+            把 json 数据转为 HttpResult 对象
+            </summary>
+            <param name="jsonBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.ParseJson(System.String)">
+            <summary>
+            把 Json 数据转换为 SModel 对象
+            </summary>
+            <param name="jsonData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.IO.HttpResult.ToString">
+            <summary>
+            输出 Json 数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.IO.HttpSuccessResult">
+            <summary>
+            成功的数据包
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpSuccessResult.#ctor">
+            <summary>
+            (构造函数)成功的数据包
+            </summary>
+        </member>
+        <member name="M:EC5.IO.HttpSuccessResult.#ctor(System.Object)">
+            <summary>
+            (构造函数)成功的数据包
+            </summary>
+            <param name="data">附带的数据</param>
+        </member>
+        <member name="M:EC5.IO.HttpSuccessResult.#ctor(System.String,System.Object)">
+            <summary>
+            (构造函数)成功的数据包
+            </summary>
+            <param name="msg">成功的信息</param>
+            <param name="data">附带的数据</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1924 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EC5.WebSite</name>
+    </assembly>
+    <members>
+        <member name="T:EC5.WebSite.AllowAnonymousAttribute">
+            <summary>
+            任意
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.AuthorizationOptions">
+            <summary>
+            授权选择器
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.AuthorizationOptions.InvokeHandlersAfterFailure">
+            <summary>
+            在上一个策略验证失败后，是否继续执行下一个授权策略
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.AuthorizationOptions.DefaultPolicy">
+            <summary>
+            默认 Policy
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.AuthorizationOptions.Policys">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.AuthorizationOptions.AddPolicy(System.String,EC5.WebSite.AuthorizationPolicy)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="policy"></param>
+        </member>
+        <member name="M:EC5.WebSite.AuthorizationOptions.GetPolicy(System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.IAuthorizationPolicyProvider">
+            <summary>
+            授权策略
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.AuthorizePolicyProvider">
+            <summary>
+            策略
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.AuthorizeAttribute">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.AuthorizeAttribute.#ctor">
+            <summary>
+            授权
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.AuthorizeAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EC5.WebSite.AuthorizeAttribute"/> class with the specified policy. 
+            </summary>
+            <param name="policy">授权策略</param>
+        </member>
+        <member name="P:EC5.WebSite.AuthorizeAttribute.Policy">
+            <summary>
+            授权策略
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.AuthorizeAttribute.Roles">
+            <summary>
+            授权角色
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.AuthorizeAttribute.AuthenticationSchemes">
+            <summary>
+            授权Schemes
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.Configuration.Application">
+            <summary>
+            应用程序及
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Configuration.Application.VirtualDirectorys">
+            <summary>
+            虚拟目录
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.Configuration.Site">
+            <summary>
+            网站配置
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Configuration.Site.BindingPort">
+            <summary>
+            绑定端口
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Configuration.Site.ServerAutoStart">
+            <summary>
+            服务器自动启动
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.Configuration.SiteList">
+            <summary>
+            网站配置集合
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.Configuration.VirtualDirectory">
+            <summary>
+            虚拟目录
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Configuration.VirtualDirectory.PhysicalPath">
+            <summary>
+            物理路径
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.Configuration.WebServerConfig">
+            <summary>
+            网站服务器配置
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.Configuration.WebServerConfig.Sample">
+            <summary>
+            例子
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.ExecType">
+            <summary>
+            协程或线程模式
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.ExecType.Coroutine">
+            <summary>
+            协程
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.ExecType.Thread">
+            <summary>
+            线程
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.FileContentType">
+            <summary>
+            文件内容类型
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.FileContentType.GetContentType(System.String)">
+            <summary>
+            获取文件内容
+            </summary>
+            <param name="fileEx"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.HttpContext">
+            <summary>
+            HTTP 上下文
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.HttpContext.m_ThreadContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpContext.Current">
+            <summary>
+            获取当前 http 上下文
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpContext.ExecType">
+            <summary>
+            执行模式
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpContext.Create(EC5.HttpModel.HttpClient,EC5.WebSite.ExecType)">
+            <summary>
+            
+            </summary>
+            <param name="client"></param>
+            <param name="execType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WebSite.HttpContext.Owner">
+            <summary>
+            上级 
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpContext.ThreadId">
+            <summary>
+            线程 id
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpContext.HasItems">
+            <summary>
+            包含 Items 项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WebSite.HttpContext.Items">
+            <summary>
+            上线文储存的条目
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpContext.ParseQueryString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WebSite.HttpContext.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpContext.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpContext.RewritePath(System.String,System.String,System.String)">
+            <summary>
+            使用给定的路径、路径信息和查询字符串信息重写 URL。
+            </summary>
+            <param name="filePath">内部重写路径。</param>
+            <param name="pathInfo">资源的附加路径信息。 有关详细信息，请参阅System.Web.HttpRequest.PathInfo。</param>
+            <param name="queryString">请求查询字符串。</param>
+        </member>
+        <member name="M:EC5.WebSite.HttpContext.RewritePath(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            使用给定虚拟路径、路径信息、查询字符串信息和一个布尔值重写 URL，该布尔值用于指定是否将客户端文件路径设置为重写路径。
+            </summary>
+            <param name="filePath">服务请求的资源的虚拟路径。</param>
+            <param name="pathInfo">用于 URL 重定向的附加路径信息。 有关更多信息，请参见System.Web.HttpRequest.PathInfo。</param>
+            <param name="queryString">用于 URL 重定向的请求查询字符串。</param>
+            <param name="setClientFilePath">若要将用于客户端资源的文件路径设置为 filePath 参数的值，则为 true；否则为 false。</param>
+        </member>
+        <member name="M:EC5.WebSite.HttpContext.RewritePath(System.String,System.Boolean)">
+            <summary>
+            用给定路径和一个布尔值重写 URL，该布尔值用于指定是否修改服务器资源的虚拟路径。
+            </summary>
+            <param name="path">内部重写路径。</param>
+            <param name="rebaseClientPath">如果重置虚拟路径，则为 true；如果保持虚拟路径不变，则为 false。</param>
+        </member>
+        <member name="M:EC5.WebSite.HttpContext.RewritePath(System.String)">
+            <summary>
+            使用给定路径重写 URL。
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:EC5.WebSite.HttpContext.Dispose">
+            <summary>
+            释放
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRequest.ContentType">
+            <summary>
+            内容类型
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRequest.Item(System.String)">
+            <summary>
+            获取请求的参数
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.HttpRequest.GetParam(EC5.WebSite.HttpContext,System.String)">
+            <summary>
+            获取 API 的 action
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WebSite.HttpRequest.UserHostAddress">
+            <summary>
+            获取用户的 IP
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRequest.Method">
+            <summary>
+            请求方式
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRequest.QueryString">
+            <summary>
+            获取 HTTP 查询字符串变量集合。
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRequest.RewritePath(System.String,System.Boolean)">
+            <summary>
+            用给定路径和一个布尔值重写 URL，该布尔值用于指定是否修改服务器资源的虚拟路径。
+            </summary>
+            <param name="path">内部重写路径。</param>
+            <param name="rebaseClientPath">如果重置虚拟路径，则为 true；如果保持虚拟路径不变，则为 false。</param>
+        </member>
+        <member name="P:EC5.WebSite.HttpRequest.Files">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRequest.InputContent">
+            <summary>
+            输入的字节内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:EC5.WebSite.HttpRequest.Form">
+            <summary>
+            获取 HTTP 查询字符串变量集合。
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRequest.Headers">
+            <summary>
+            获取 HTTP 头集合。
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRequest.Dispose">
+            <summary>
+            释放内存
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.HttpResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.HttpResponse.m_WriteStream">
+            <summary>
+            输出
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponse.ContentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponse.Header">
+            <summary>
+            自定义头部
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponse.Status">
+            <summary>
+            状态编码
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponse.Encdoing">
+            <summary>
+            编码规则
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpResponse.Write(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:EC5.WebSite.HttpResponse.Write(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:EC5.WebSite.HttpResponse.Write(EC5.IO.HttpResult)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponse.ResponseWriteStream">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpResponse.End">
+            <summary>
+            结束处理
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpResponse.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpResponse.Dispose">
+            <summary>
+            释放内存
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.HttpStatusCode">
+            <summary>
+            HTTP 响应的状态代码。
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.HttpResponseHeaders">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.HttpResponseMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponseMessage.Version">
+            <summary>
+            获取或设置 HTTP 消息版本。
+            </summary>
+            <return> HTTP 消息版本。 默认值为 1.1。</return>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponseMessage.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponseMessage.StatusCode">
+            <summary>
+            获取或设置 HTTP 响应的状态代码。
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponseMessage.ReasonPhrase">
+            <summary>
+            获取或设置通常由服务器发出的原因短语（与状态代码一起发出）。
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponseMessage.Headers">
+            <summary>
+            获取 HTTP 响应标头的集合。
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponseMessage.RequestMessage">
+            <summary>
+            获取或设置导致此响应消息的请求消息。
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpResponseMessage.IsSuccessStatusCode">
+            <summary>
+            获取一个值，该值指示 HTTP 响应是否成功。
+            </summary>
+            <return>一个指示 HTTP 响应是否成功的值。 如果 System.Net.Http.HttpResponseMessage.StatusCode 在 200-299 范围内，则为 true；否则为 false。</return>
+        </member>
+        <member name="M:EC5.WebSite.HttpResponseMessage.EnsureSuccessStatusCode">
+            <summary>
+            如果 HTTP 响应的 System.Net.Http.HttpResponseMessage.IsSuccessStatusCode 属性是 false，则引发异常。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.HttpRequestMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRequestMessage.#ctor">
+            <summary>
+            初始化 HttpRequestMessage 类的新实例。
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRequestMessage.#ctor(EC5.HttpModel.HttpMethod,System.Uri)">
+            <summary>
+            新实例初始化 HttpRequestMessage 类的 HTTP 方法和请求 System.Uri。
+            </summary>
+            <param name="method"></param>
+            <param name="requestUri"></param>
+        </member>
+        <member name="T:EC5.WebSite.HttpRouteManager">
+            <summary>
+            路由管理器
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.HttpRouteManager.m_Root">
+            <summary>
+            跟路由
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteManager.Root">
+            <summary>
+            根路由
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.HttpRoute">
+            <summary>
+            路由器
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRoute.AddPage(System.String,System.Type)">
+            <summary>
+            添加页
+            </summary>
+            <param name="path"></param>
+            <param name="type"></param>
+            <param name="pageT"></param>
+        </member>
+        <member name="T:EC5.WebSite.HttpRouteNodeType">
+            <summary>
+            节点类型
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.HttpRouteNodeType.Dir">
+            <summary>
+            目录类型
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.HttpRouteNodeType.File">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.HttpRouteNode">
+            <summary>
+            路由节点
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.HttpRouteNode.m_Files">
+            <summary>
+            页面
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.HttpRouteNode.m_Dirs">
+            <summary>
+            目录
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.Name">
+            <summary>
+            目录名称
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.ExName">
+            <summary>
+            扩展名称
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.Type">
+            <summary>
+            节点类型
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.PageType">
+            <summary>
+            页面类型
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.IsReusable">
+            <summary>
+            可再度使用
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.PageInstance">
+            <summary>
+            实例对象
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.FullName">
+            <summary>
+            全地址
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.Authorizes">
+            <summary>
+            授权集合
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNode.Dirs">
+            <summary>
+            目录列表
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRouteNode.#ctor">
+            <summary>
+            (构造函数)
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRouteNode.#ctor(System.String,EC5.WebSite.HttpRouteNodeType)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="name"></param>
+            <param name="nodeType"></param>
+        </member>
+        <member name="T:EC5.WebSite.HttpRouteNodeList">
+            <summary>
+            节点列表
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.HttpRouteNodeList.Add(EC5.WebSite.HttpRouteNode)">
+            <summary>
+            添加节点
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="P:EC5.WebSite.HttpRouteNodeList.Count">
+            <summary>
+            节点数据量
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.IAuthorizeData.Policy">
+            <summary>
+            授权策略
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.IAuthorizeData.Roles">
+            <summary>
+            授权角色
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.IAuthorizeData.AuthenticationSchemes">
+            <summary>
+            授权Schemes 的支持
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.IHttpActionResult">
+            <summary>
+            反馈的异步调用
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.IHttpActionResult.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            执行反馈异步
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.IHttpHandler">
+            <summary>
+            定义 ASP.NET 以异步方式处理使用自定义 HTTP 处理程序的 HTTP Web 请求而实现的协定。
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.IHttpHandler.IsReusable">
+            <summary>
+            获取一个值，该值指示是否可以使用另一个请求 System.Web.IHttpHandler 实例。
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.IHttpHandler.ProcessRequest(EC5.WebSite.HttpContext)">
+            <summary>
+            由自定义 HTTP Web 请求的允许处理 HttpHandler 实现 System.Web.IHttpHandler 接口。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:EC5.WebSite.JwtSecurityTokenHandler">
+            <summary>
+            JWT 安全
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.JwtSecurityTokenHandler.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.JwtSecurityTokenHandler.#ctor(System.Action{EC5.WebSite.HttpContext})">
+            <summary>
+            
+            </summary>
+            <param name="requestContext"></param>
+        </member>
+        <member name="M:EC5.WebSite.JwtSecurityTokenHandler.ProcessRequest(EC5.WebSite.HttpContext)">
+            <summary>
+            执行请求
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:EC5.WebSite.PageLoadingCallbackArgs">
+            <summary>
+            回调的数据
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingCallbackArgs.Tag">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingCallbackArgs.Cancel">
+            <summary>
+            取消
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingCallbackArgs.IsPlugin">
+            <summary>
+            是否为插件的
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingCallbackArgs.Plugin">
+            <summary>
+            插件编码
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingCallbackArgs.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingCallbackArgs.ContentType">
+            <summary>
+            上下文类型
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingCallbackArgs.Headers">
+            <summary>
+            header 头部参数
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.PageLoadingCallbackArgs.Dispose">
+            <summary>
+            释放内存
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.PageExceptionEventArgs.#ctor(EC5.WebSite.HttpContext,System.Exception)">
+            <summary>
+            (构造函数)
+            </summary>
+            <param name="context"></param>
+            <param name="error"></param>
+        </member>
+        <member name="P:EC5.WebSite.PageExceptionEventArgs.Context">
+            <summary>
+            http 上下文
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageExceptionEventArgs.Error">
+            <summary>
+            错误消息
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.PageExceptionEventArgs.Dispose">
+            <summary>
+            释放内存
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.PageLoadingEventArgs">
+            <summary>
+            页面加载参数
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.PageLoadingEventArgs.#ctor(EC5.WebSite.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingEventArgs.Callback">
+            <summary>
+            回调函数
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingEventArgs.IsWaitOne">
+            <summary>
+            等待模式
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingEventArgs.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingEventArgs.IsPlugin">
+            <summary>
+            是否为插件的
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingEventArgs.Plugin">
+            <summary>
+            插件编码
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingEventArgs.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingEventArgs.ContentType">
+            <summary>
+            上下文类型
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.PageLoadingEventArgs.Headers">
+            <summary>
+            header 头部参数
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.Results.IRouteResulteHandler.CanHander(System.Type)">
+            <summary>
+            能处理
+            </summary>
+            <param name="resultT">值类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.Results.JsonResult`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Results.JsonResult`1.SerializerSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Results.JsonResult`1.Encoding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Results.JsonResult`1.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Results.JsonResult`1.Content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.Results.JsonResult`1.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.Results.RouteCoroutineTaskInfo">
+            <summary>
+            处理过程的内部类
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Results.RouteCoroutineTaskInfo.Task">
+            <summary>
+            任务 ID
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Results.RouteCoroutineTaskInfo.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.Results.RouteCoroutineTaskResult">
+            <summary>
+            协程
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteCoroutineTaskResult.NewID">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteCoroutineTaskResult.CanHander(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="resultT"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteCoroutineTaskResult.PreResult(EC5.WebSite.HttpContext,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteCoroutineTaskResult.PreResult_CoroutineTask(EC6.UnityEngine.CoroutineTask,EC5.WebSite.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <param name="context"></param>
+        </member>
+        <member name="F:EC5.WebSite.Results.RouteResulteFactory.m_RouteResults">
+            <summary>
+            反馈
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteResulteFactory.Add(EC5.WebSite.Results.IRouteResulteHandler)">
+            <summary>
+            反馈处理值
+            </summary>
+            <param name="routeResultHandler"></param>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteResulteFactory.GetHandler(System.Type)">
+            <summary>
+            获取处理对象
+            </summary>
+            <param name="resultT"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.Results.RouteTaskInfo">
+            <summary>
+            处理过程的内部类
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Results.RouteTaskInfo.Task">
+            <summary>
+            任务 ID
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.Results.RouteTaskInfo.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.Results.RouteTaskResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.Results.RouteTaskResult.m_Tasks">
+            <summary>
+            异步处理过程
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteTaskResult.PreResult(EC5.WebSite.HttpContext,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteTaskResult.CanHander(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="resultT"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Results.RouteTaskResult.PreResult_Task(EC5.WebSite.HttpContext,System.Threading.Tasks.Task)">
+            <summary>
+            处理异步任务
+            </summary>
+            <param name="context"></param>
+            <param name="result"></param>
+        </member>
+        <member name="M:EC5.WebSite.Results.XmlResult.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.ServerCore">
+            <summary>
+            核心服务器
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.ServerCore.#ctor">
+            <summary>
+            (构造函数) 核心服务器
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.SiteModule">
+            <summary>
+            网站模块
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SiteModule.WebSitePath">
+            <summary>
+            网站地址
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SiteModule.Route">
+            <summary>
+            页面路由
+            </summary>
+        </member>
+        <member name="E:EC5.WebSite.SiteModule.PageLoading">
+            <summary>
+            页面加载事件
+            </summary>
+        </member>
+        <member name="E:EC5.WebSite.SiteModule.PageError">
+            <summary>
+            页面模块发生异常
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SiteModule.CoroProcessRequest">
+            <summary>
+            协程进程请求
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SiteModule.EnableDebug">
+            <summary>
+            激活调试
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SiteModule.AuthenticationBuilder">
+            <summary>
+            安全
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SiteModule.Exec(EC5.HttpModel.HttpClient)">
+            <summary>
+            执行
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="M:EC5.WebSite.SiteModule.ExecCoroutine(EC5.HttpModel.HttpClient)">
+            <summary>
+            协程接口
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.PageLoadingCallback">
+            <summary>
+            页面加载的回调函数
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.PageLoadingDelegate">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:EC5.WebSite.PageExceptionDelegate">
+            <summary>
+            页面发生异常
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:EC5.WebSite.CoroProcessRequest">
+            <summary>
+            协程的处理请求
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.SitePage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePage.Route">
+            <summary>
+            路由
+            </summary>
+        </member>
+        <member name="E:EC5.WebSite.SitePage.PageLoading">
+            <summary>
+            页面加载事件
+            </summary>
+        </member>
+        <member name="E:EC5.WebSite.SitePage.PageError">
+            <summary>
+            页面发生错误
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePage.WebSitePath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePage.Localhost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePage.GZipEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePage.Server">
+            <summary>
+            服务器类型
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.CreateResponseHeader(EC5.WebSite.HttpResponse)">
+            <summary>
+            创建输出头
+            </summary>
+            <param name="resp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.ExecCoroutine(EC5.HttpModel.HttpClient)">
+            <summary>
+            执行协程.
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.Exec(EC5.HttpModel.HttpClient)">
+            <summary>
+            
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.ProPath(EC5.WebSite.HttpContext)">
+            <summary>
+            处理路径
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.WriteNoFound_404(EC5.WebSite.HttpResponse)">
+            <summary>
+            输出页面没有找到的数据 404
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.SitePage.m_ManualRE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.SitePage.m_IsWaitOne">
+            <summary>
+            释放阻止当前线程
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.Set">
+            <summary>
+            页面开始
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.WaitOne">
+            <summary>
+            等待
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.SitePage.m_CallbackArgs">
+            <summary>
+            回调的事件
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.ProAPP(EC5.WebSite.HttpContext)">
+            <summary>
+            处理 APP 模块
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.IsAuthorization(EC5.WebSite.HttpContext,EC5.WebSite.HttpRouteNode,EC5.WebSite.WebAPI.AjaxMethodInfo)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="pageNode"></param>
+            <param name="ajaxMI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.ProAPI(EC5.WebSite.HttpContext,EC5.WebSite.HttpRouteNode,System.String)">
+            <summary>
+            处理 API 函数
+            </summary>
+            <param name="context"></param>
+            <param name="pageNode"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:EC5.WebSite.SitePage.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.SitePageCoroutine">
+            <summary>
+            网站页面协程
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePageCoroutine.Route">
+            <summary>
+            路由
+            </summary>
+        </member>
+        <member name="E:EC5.WebSite.SitePageCoroutine.PageLoading">
+            <summary>
+            页面加载事件
+            </summary>
+        </member>
+        <member name="E:EC5.WebSite.SitePageCoroutine.PageError">
+            <summary>
+            页面发生错误
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePageCoroutine.CoroProcessRequest">
+            <summary>
+            协程的处理过程
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePageCoroutine.WebSitePath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePageCoroutine.Localhost">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePageCoroutine.GZipEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.SitePageCoroutine.Server">
+            <summary>
+            服务器类型
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.CreateResponseHeader(EC5.WebSite.HttpResponse)">
+            <summary>
+            创建输出头
+            </summary>
+            <param name="resp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.ExecCoroutine(EC5.HttpModel.HttpClient)">
+            <summary>
+            执行协程.
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.Exec(EC5.HttpModel.HttpClient)">
+            <summary>
+            
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.ProPath(EC5.WebSite.HttpContext)">
+            <summary>
+            处理路径
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.WriteNoFound_404(EC5.WebSite.HttpResponse)">
+            <summary>
+            输出页面没有找到的数据 404
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.SitePageCoroutine.m_IsWaitOne">
+            <summary>
+            释放阻止当前线程
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.Set">
+            <summary>
+            页面开始
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.WaitOne">
+            <summary>
+            等待
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.SitePageCoroutine.m_CallbackArgs">
+            <summary>
+            回调的事件
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.ProAPP(EC5.WebSite.HttpContext)">
+            <summary>
+            处理 APP 模块
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.ProAPI(EC5.WebSite.HttpContext,EC5.WebSite.HttpRouteNode,System.String)">
+            <summary>
+            处理 API 函数
+            </summary>
+            <param name="context"></param>
+            <param name="pageNode"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:EC5.WebSite.SitePageCoroutine.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.Utilitys.HttpUtil">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.Query``1(System.String,``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.Query``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryInt(System.String,System.Int32)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryInt(System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryLong(System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryDateTime(System.String,System.DateTime)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryDateTime(System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryBool(System.String,System.Boolean)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryBool(System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.Query(System.String,System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryUpper(System.String,System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString 大写输出
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryLower(System.String,System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString 小写输出
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryUpper(System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString 大写输出
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryLower(System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString 小写输出
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryTrimLower(System.String,System.String)">
+            <summary>
+            从当前 System.String 对象移除所有前导空白字符和尾部空白字符。转换为小写
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryTrim(System.String)">
+            <summary>
+            从当前 System.String 对象移除所有前导空白字符和尾部空白字符。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryTrim(System.String,System.String)">
+            <summary>
+            从当前 System.String 对象移除所有前导空白字符和尾部空白字符。
+            </summary>
+            <param name="key"></param>
+            <param name="defualtValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryTrimLower(System.String)">
+            <summary>
+            从当前 System.String 对象移除所有前导空白字符和尾部空白字符。转换为小写
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryTrimUpper(System.String,System.String)">
+            <summary>
+            从当前 System.String 对象移除所有前导空白字符和尾部空白字符。转换为大写
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryTrimUpper(System.String)">
+            <summary>
+            从当前 System.String 对象移除所有前导空白字符和尾部空白字符。转换为大写
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryBase64(System.String)">
+            <summary>
+            获取 Base64 解密后的原文
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.QueryBase64(System.String,System.String)">
+            <summary>
+            获取 Base64 解密后的原文
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.ToQueryString(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            获取查询的字符串
+            </summary>
+            <param name="nameValueCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.FormInt(System.String,System.Int32)">
+            <summary>
+            获取窗体变量集合。增强 Request.Form
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.FormInt(System.String)">
+            <summary>
+            获取窗体变量集合。增强 Request.Form
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.FormIntList(System.String)">
+            <summary>
+             获取窗体变量集合。增强 Request.Form
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.FormUpper(System.String,System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString 大写输出
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.FormLower(System.String,System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString 小写输出
+            </summary>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.FormUpper(System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString 大写输出
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.Utilitys.HttpUtil.FormLower(System.String)">
+            <summary>
+            获取 HTTP 查询字符串变量集合。增强 Request.QueryString 小写输出
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.AjaxActionChange">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxActionChange.None">
+            <summary>
+            不转换
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxActionChange.IgnoreCase">
+            <summary>
+            忽略大小写
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxActionChange.UpperCase">
+            <summary>
+            大写字母
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxActionChange.LowerCase">
+            <summary>
+            小写字母
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.AjaxResponseMode">
+            <summary>
+            反馈模式
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxResponseMode.Auto">
+            <summary>
+            自动
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxResponseMode.User">
+            <summary>
+            用户自定义
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.AjaxAttribute">
+            <summary>
+            AJAX 函数定义
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebAPI.AjaxAttribute.#ctor">
+            <summary>
+            AJAX 函数定义
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebAPI.AjaxAttribute.#ctor(System.String)">
+            <summary>
+            AJAX 函数定义
+            </summary>
+            <param name="ajaxName"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebAPI.AjaxAttribute.#ctor(System.String,EC5.WebSite.WebAPI.AjaxResponseMode)">
+            <summary>
+            AJAX 函数定义
+            </summary>
+            <param name="ajaxName"></param>
+            <param name="responseMode"></param>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxAttribute.Name">
+            <summary>
+            Ajax 名称
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxAttribute.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxAttribute.ResponseMode">
+            <summary>
+            反馈模式
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.FromUrlAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.FromBodyAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.AjaxHandler">
+            <summary>
+            Web API 处理类
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxHandler.ActionMedhod">
+            <summary>
+            请求 action 名称
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxHandler.ActionName">
+            <summary>
+            action 命名. 默认: action
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxHandler.ActionChange">
+            <summary>
+            Action 名称转换
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxHandler.IsExecedAjaxMethod">
+            <summary>
+            是否已经执行了 函数
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxHandler.IsReusable">
+            <summary>
+            可复用. 默认: true
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.AjaxHandlerManager">
+            <summary>
+            AjaxHandler 管理类
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebAPI.AjaxHandlerManager.GetMethod(System.Type,System.String)">
+            <summary>
+            获取函数
+            </summary>
+            <param name="handlerT"></param>
+            <param name="ajaxName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EC5.WebSite.WebAPI.AjaxHandlerManager.GetMethod(System.Guid,System.String)">
+            <summary>
+            获取函数
+            </summary>
+            <param name="handlerTGuid"></param>
+            <param name="ajaxName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.AjaxMethodInfo">
+            <summary>
+            ajax 函数
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxMethodInfo.AjaxName">
+            <summary>
+            ajax 名称
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxMethodInfo.Method">
+            <summary>
+            函数名
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxMethodInfo.ResponseMethod">
+            <summary>
+            反馈模式
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxMethodInfo.IsAlias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxMethodInfo.Authorizes">
+            <summary>
+            授权集合
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.AjaxMethodInfo.AllowAnonymous">
+            <summary>
+            任意
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.AjaxMethodList">
+            <summary>
+            Ajax 函数集合
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebAPI.AjaxMethodList.#ctor">
+            <summary>
+            Ajax 函数集合
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebAPI.AjaxMethodList.#ctor(System.StringComparer)">
+            <summary>
+            Ajax 函数集合
+            </summary>
+            <param name="comparer"></param>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.AjaxRequestMethod">
+            <summary>
+            请求的函数类型
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxRequestMethod.Auto">
+            <summary>
+            自动
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxRequestMethod.QueryString">
+            <summary>
+            超链接
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebAPI.AjaxRequestMethod.Form">
+            <summary>
+            表单提交
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.ErrorProcessEventArgs">
+            <summary>
+            错误的事件名
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebAPI.ErrorProcessEventArgs.#ctor(System.Exception,System.String,System.String)">
+            <summary>
+            错误的事件名
+            </summary>
+            <param name="error"></param>
+            <param name="ajaxMehtod"></param>
+            <param name="method"></param>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.ErrorProcessEventArgs.Cancel">
+            <summary>
+            取消自己
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.ErrorProcessEventArgs.Error">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.ErrorProcessEventArgs.Method">
+            <summary>
+            本地函数名
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebAPI.ErrorProcessEventArgs.AjaxMethod">
+            <summary>
+            ajax 的函数名
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.HttpGetAttribute">
+            <summary>
+            Http Get 获取
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.WebAPI.HttpPostAttribute">
+            <summary>
+            Http Post 获取
+            </summary>
+        </member>
+        <member name="T:EC5.WebSite.AuthorizationContext">
+            <summary>
+            授权的上下文
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebSiteAuthorizationBuilder.m_AuthPolicyProviders">
+            <summary>
+            安全授权策略
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteAuthorizationBuilder.AddAuthentication(System.Action{EC5.WebSite.AuthorizationOptions})">
+            <summary>
+            添加 策略提供者
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteAuthorizationBuilder.GetPolicyProvider(System.String)">
+            <summary>
+            获取 策略提供者
+            </summary>
+            <param name="policy"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EC5.WebSite.WebSiteServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebSiteServer.ExecBodyCoroutine">
+            <summary>
+            执行 body 采用协程
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebSiteServer.m_HttpServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebSiteServer.EnableDebug">
+            <summary>
+            调试激活
+            </summary>
+        </member>
+        <member name="E:EC5.WebSite.WebSiteServer.PageLoading">
+            <summary>
+            页面加载事件
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.OnPageLoading(EC5.WebSite.PageLoadingEventArgs)">
+            <summary>
+            页面加载的过程
+            </summary>
+            <param name="ea"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.OnPrePageLoading(EC5.WebSite.PageLoadingEventArgs)">
+            <summary>
+            触发页面加载的过程
+            </summary>
+            <param name="ea"></param>
+        </member>
+        <member name="P:EC5.WebSite.WebSiteServer.Route">
+            <summary>
+            路由
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.Config(System.String)">
+            <summary>
+            配置文件
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="P:EC5.WebSite.WebSiteServer.BindingPort">
+            <summary>
+            绑定端口号
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.Config(System.String,System.Int32)">
+            <summary>
+            配置信息
+            </summary>
+            <param name="physicsPath"></param>
+            <param name="biningsPort"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.Error(System.Action{EC5.WebSite.PageExceptionEventArgs})">
+            <summary>
+            页面发生错误信息
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.OnError(EC5.WebSite.PageExceptionEventArgs)">
+            <summary>
+            触发错误信息
+            </summary>
+            <param name="ea"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.OnPreError(EC5.WebSite.PageExceptionEventArgs)">
+            <summary>
+            触发错误
+            </summary>
+            <param name="ea"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.EndRequest(System.Action{EC5.HttpModel.HttpClient})">
+            <summary>
+            结束请求
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.OnEndRequest(EC5.HttpModel.HttpClient)">
+            <summary>
+            页面结束的事件
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="P:EC5.WebSite.WebSiteServer.MaxThread">
+            <summary>
+            线程数
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebSiteServer.MaxOvertime">
+            <summary>
+            线程的超时时间
+            </summary>
+        </member>
+        <member name="P:EC5.WebSite.WebSiteServer.CoroProcessRequest">
+            <summary>
+            (协程)进程请求
+            </summary>
+        </member>
+        <member name="F:EC5.WebSite.WebSiteServer.m_Auth">
+            <summary>
+            策略管理器
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.AddAuthentication(System.Action{EC5.WebSite.AuthorizationOptions})">
+            <summary>
+            添加验证规则
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.OnServerClosed(System.Object,System.EventArgs)">
+            <summary>
+            服务器关闭事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.OnPreServerOpen(System.Object,System.EventArgs)">
+            <summary>
+            服务打开
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.Start">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="M:EC5.WebSite.WebSiteServer.Stop">
+            <summary>
+            暂停
+            </summary>
+        </member>
+    </members>
+</doc>
