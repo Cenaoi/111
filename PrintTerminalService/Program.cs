@@ -67,7 +67,7 @@ namespace PrintTerminalService
 
 
         /// <summary>
-        /// 避免重复运行20210822
+        /// 避免重复运行
         /// </summary>
         /// <returns></returns>
         public static void CheckCurrentProcessRerunClose()
