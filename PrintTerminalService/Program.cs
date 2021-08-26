@@ -37,6 +37,8 @@ namespace PrintTerminalService
 
             }
 
+            Bll.BizReqHelper.ReqBaseDomain = Properties.Settings.Default.ReqBaseDomain;
+
             ServiceBase[] ServicesToRun;
 
             ServicesToRun = new ServiceBase[]

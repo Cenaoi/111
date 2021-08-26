@@ -19,7 +19,13 @@ namespace PrintTerminalService.Bll
         /// <summary>
         /// 请求地址
         /// </summary>
-        public static string ReqBaseUrl { get; set; } = "http://localhost:1789/App/InfoGrid2/GBZZZD/Api/Index.ashx";
+        public static string ReqBaseUrl 
+        {
+            get
+            {
+                return ReqBaseDomain + "/App/InfoGrid2/GBZZZD/Api/Index.ashx";
+            }
+        } 
 
         /// <summary>
         /// 
